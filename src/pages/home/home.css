@@ -1,0 +1,136 @@
+
+.home {
+    grid-template-columns: 4.32fr 7.68fr;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+}
+
+
+
+.home__img {
+      height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow:0 0 8px  hsla(0, 0%,0%,0.3);
+    z-index: 1; 
+}
+/* .color__block::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 600px;
+    width: 200px;
+    background-color: rgb(232, 68, 23);
+    animation: move 1.5s infinite;
+    overflow: hidden;
+/* } */
+/* 
+@keyframes move {
+    100% {
+        transform: translate(-50%, -50%) rotate(225deg);
+    }
+/* } */
+
+
+.home__data {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;
+}
+
+.home__title {
+    position: relative;
+    font-size: var(--h1-font-size);
+    line-height: 1.24;
+    padding-left: 70px;
+}
+.home__title span {
+    color: var(--first-color);
+    
+}
+
+.home__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 22%;
+    width: 40px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+}
+
+.home__description {
+    line-height: 2.125;
+    margin-block: 16px 32px;
+}
+
+.color__block { 
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    background-color:var(--first-color);
+    top: -50%;
+    left: -83%;
+    transform: rotate(-15deg); 
+     content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 600px;
+    width:200px;
+    background-color: rgb(111, 9, 171); 
+}
+.home {
+    display: grid;
+    grid-template-columns: 4.32fr 7.68fr;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+    position: relative; /* Ensure the home section is the positioning context */
+}
+
+.home__img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.3);
+    z-index: 2; /* Ensure the image is above the color block */
+    position: relative; /* Ensure it is positioned within the home section */
+}
+
+.color__block { 
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    background-color: var(--first-color);
+    top: -50%;
+    left: -83%;
+    transform: rotate(-15deg); 
+    z-index: 1; /* Ensure the color block is behind the image */
+}
+
+.color__block::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 600px;
+    width: 200px;
+    animation: move 1.5s infinite;
+    overflow: hidden;
+    z-index: 1; /* Ensure the ::after element is behind the image */
+}
+
+@keyframes move {
+    100% {
+        transform: translate(-50%, -50%) rotate(225deg);
+    }
+}
