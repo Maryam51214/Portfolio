@@ -13,6 +13,7 @@
     width: 100%;
     object-fit: cover;
     vertical-align: middle;
+   
 }
 
 .portfolio__hover {
@@ -58,6 +59,10 @@
     position: relative;
 
 }
+.portfolio__hover {
+    pointer-events: none; /* Add this to allow clicks to pass through */
+  }
+  
 
 .modal__close{
     position: absolute;
